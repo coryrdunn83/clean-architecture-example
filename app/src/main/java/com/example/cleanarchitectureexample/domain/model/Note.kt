@@ -1,12 +1,8 @@
 package com.example.cleanarchitectureexample.domain.model
 
-import androidx.compose.ui.graphics.Color.Companion.Blue
-import androidx.compose.ui.graphics.Color.Companion.Green
-import androidx.compose.ui.graphics.Color.Companion.Red
-import androidx.compose.ui.graphics.Color.Companion.Yellow
 import androidx.room.Entity
 import androidx.room.PrimaryKey
-import com.example.cleanarchitectureexample.presentation.theme.Purple200
+import com.example.cleanarchitectureexample.presentation.theme.*
 
 @Entity
 data class Note(
@@ -17,7 +13,7 @@ data class Note(
     @PrimaryKey val id: Int? = null
 ) {
     companion object {
-        val noteColors = listOf(Red, Green, Yellow, Blue, Purple200)
+        val noteColors = listOf(Pink, Purple, LightBlue, Lime, Yellow)
     }
 }
 

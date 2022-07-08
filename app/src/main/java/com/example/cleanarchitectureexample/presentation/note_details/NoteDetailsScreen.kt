@@ -1,5 +1,6 @@
 package com.example.cleanarchitectureexample.presentation.note_details
 
+import androidx.activity.compose.BackHandler
 import androidx.compose.animation.Animatable
 import androidx.compose.animation.core.tween
 import androidx.compose.foundation.background
@@ -42,6 +43,10 @@ fun NoteDetailsScreen(
         Animatable(
             Color(if (noteColor != -1) noteColor else viewModel.noteColorState.value)
         )
+    }
+
+    BackHandler(enabled = true) {
+        navController.navigateUp()
     }
 
     LaunchedEffect(key1 = true) {
