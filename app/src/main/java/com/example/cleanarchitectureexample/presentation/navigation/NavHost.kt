@@ -22,7 +22,7 @@ fun CleanArchitectureNavHost(
             NoteListScreen(navController = navController)
         }
         composable(
-            route = Screen.NoteDetailsScreen.route + "?noteId={noteId}&noteColor{noteColor}",
+            route = Screen.NoteDetailsScreen.route + "?noteId={noteId}&noteColor={noteColor}",
             arguments = listOf(
                 navArgument(name = "noteId") {
                     type = NavType.IntType
